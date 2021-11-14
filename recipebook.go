@@ -51,7 +51,7 @@ func loadRecipe(title string) (*Recipe, error) {
 }
 
 
-var templates = template.Must(template.ParseFiles("src/view.html", "src/edit.html"))
+var templates = template.Must(template.ParseFiles("view.html", "edit.html"))
 
 func renderHTMLTemplate(writer http.ResponseWriter, template_name string, recipe *Recipe) {
     template_path := template_name + ".html"
@@ -133,9 +133,10 @@ func main() {
 	dbconn, err := AcornStore.Connect("acorn-store://localhost:2525/recipe-webapp/root:1234")
 	if err != nil {
 		fmt.Printf("Failed to connect to the db\n")
+		return
 	}
 	
-	db = &dbconn
+	db = dbconn
 	
 	size, err := db.Collection("recipes").Retrieve(".#")
 	if err != nil {
