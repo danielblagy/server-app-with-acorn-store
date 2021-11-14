@@ -1,0 +1,1 @@
+{"databases":[{"name":"recipe-webapp","root_path":"data/","collections":[{"name":"recipes","path":"data/recipes.json"}]}]}

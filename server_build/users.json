@@ -1,0 +1,1 @@
+{"users":[{"user":"root","password":"1234","grants":[{"db_name":"recipe-webapp","read_data":true,"modify_data":true,"add_remove_collections":true,"add_remove_users":false}]}]}

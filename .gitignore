@@ -1,3 +1,2 @@
 client_shell_build/
-server_build/
-*.txt
+*.exe
